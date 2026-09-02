@@ -8,9 +8,9 @@ All notable changes to this project will be documented in this file.
 - Built comprehensive Val Shop documentation suite covering:
   - Welcome & Quickstart Overview (`docs/intro.mdx`)
   - Authentication, 2FA, session lifecycle & multi-account switching (`docs/user-guide/authentication.mdx`)
-  - Daily storefront, bundles, Night Market & background wishlist notifications (`docs/user-guide/store-and-favorites.mdx`)
+  - Daily storefront, bundles, Night Market & Wishlist tracking (`docs/user-guide/store-and-favorites.mdx`)
   - Real-time party & matchmaking lobby controls (`docs/user-guide/party-and-lobby.mdx`)
-  - Live friends presence & real-time direct XMPP chat (`docs/user-guide/xmpp-chat.mdx`)
+  - Friends presence & in-game chat (Beta/WIP) (`docs/user-guide/xmpp-chat.mdx`)
   - Daily/weekly missions, XP projections & Battle Pass tracking (`docs/user-guide/progression.mdx`)
   - Cosmetic loadout inspection, rank goals & match history breakdown (`docs/user-guide/profile-and-stats.mdx`)
   - Privacy architecture, direct-to-Riot communication & on-device storage (`docs/privacy-and-security.mdx`)
