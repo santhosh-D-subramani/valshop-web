@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.2] - 2026-09-02
+
+### Refactor
+- Replaced raw text/emoji symbols in feature cards with clean, high-contrast monochrome SVG icons and themed background icon badges.
+
 ## [0.0.1] - 2026-09-02
 
 ### Feat

@@ -27,10 +27,20 @@
   margin-bottom: 0.75rem;
 }
 
-.featureEmojiIcon {
-  font-size: 2rem;
-  line-height: 1;
-  display: inline-block;
+.iconBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: var(--ifm-color-primary-contrast-background, rgba(var(--ifm-color-primary-rgb, 46, 133, 85), 0.1));
+  color: var(--ifm-color-primary);
+}
+
+.featureSvgIcon {
+  width: 22px;
+  height: 22px;
 }
 
 .featureTitle {
