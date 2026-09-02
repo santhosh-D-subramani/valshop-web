@@ -1,11 +1,51 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureCol {
+  display: flex;
+}
+
+.featureCol :global(.card) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.featureCol :global(.card):hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-global-shadow-tl);
+}
+
+.featureIconContainer {
+  margin-bottom: 0.75rem;
+}
+
+.featureEmojiIcon {
+  font-size: 2rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.featureSubtitle {
+  font-size: 1.15rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 650px;
+  margin: 0.5rem auto 0 auto;
+}
+
+.disclaimerBox {
+  border-radius: 8px;
+  text-align: center;
 }
