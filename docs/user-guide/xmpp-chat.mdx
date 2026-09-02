@@ -1,0 +1,33 @@
+---
+sidebar_position: 4
+---
+
+# Real-Time Friends & XMPP Chat
+
+Val Shop integrates an embedded real-time XMPP client that connects directly to Riot Games' chat servers, enabling you to communicate with friends in-game and monitor their live status.
+
+---
+
+## Direct TLS XMPP Connection
+
+Val Shop establishes a direct, encrypted TLS connection (`SecureSocket`) on port **5223** with Riot's regional chat servers (e.g., `ap.chat.si.riotgames.com`, `eu.chat.si.riotgames.com`, `na.chat.si.riotgames.com`):
+
+* **SASL Authentication**: Authenticates securely using your Riot Single Sign-On (RSO) Access Token and PAS (Player Affinity Service) token under the `X-Riot-RSO-PAS` mechanism.
+* **Low Latency & Native Protocol**: Stanzas are parsed in real time, delivering instant presence updates and messaging without relying on third-party proxies or relays.
+
+---
+
+## Live Presence & Status Indicators
+
+The **Friends** tab categorizes your friends list into Online and Offline sections, enriched with live game status details:
+
+* **In Menus**: Indicates friends browsing menus, in party lobbies, or customizing loadouts.
+* **In-Game / Match Tracking**: Displays live match score, game mode (e.g. *Competitive 11-9*), map name, and party size.
+* **Custom Status Messages**: Shows custom in-game status messages set by your friends.
+
+---
+
+## 1-on-1 Direct Messaging
+
+* **Chat In-Game Friends**: Send and receive private direct messages to friends who are playing on PC or active on mobile.
+* **Chat History**: Conversations maintain active message streams with timestamps, incoming/outgoing bubbles, and delivery states.

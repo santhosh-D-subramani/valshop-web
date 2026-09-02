@@ -1,0 +1,52 @@
+---
+sidebar_position: 8
+---
+
+# Frequently Asked Questions (FAQ)
+
+Find answers to common questions, troubleshooting steps, and tips for using Val Shop.
+
+---
+
+## General
+
+### Can I purchase skins directly inside Val Shop?
+No. Riot Games' mobile API does not allow direct skin purchases or VP transactions. Val Shop allows you to view active rotations, bundle countdowns, prices, and preview videos so you know what is in your store without launching VALORANT on your PC.
+
+### Is Val Shop free to use?
+Yes, Val Shop is free to download and use.
+
+---
+
+## Authentication & Sessions
+
+### Why did my session expire?
+Riot Games sessions naturally expire or become invalid when:
+* You change your Riot password.
+* You log out of all active sessions from the Riot Account Management portal.
+* The session token reaches Riot's maximum session lifetime limit.
+
+When this happens, simply tap **Sign In** to renew your authentication.
+
+### Is my Riot Account safe when using Val Shop?
+Yes. Authentication occurs directly through Riot's official web login page (`auth.riotgames.com`) within an embedded web view. Val Shop never sees or stores your plain-text password and communicates directly with official Riot endpoints.
+
+---
+
+## Wishlist & Notifications
+
+### Why didn't I receive a notification for my wishlisted skin?
+Ensure the following settings are enabled on your device:
+1. **Notifications Permission**: Confirm that Val Shop has notification permissions granted in your phone's system settings.
+2. **Battery Optimization**: On some Android devices (e.g. Xiaomi, Samsung, OnePlus), aggressive battery optimization or task killers may prevent background workers (`Workmanager`) from running periodically. Exclude Val Shop from battery optimization for reliable background checks.
+3. **Active Session**: Ensure your account is signed in and has not encountered a session expiry.
+
+---
+
+## Party & Chat
+
+### Can I queue for Competitive matches from my phone?
+Yes, as party leader, you can select the Competitive queue and initiate matchmaking from the Party tab. Note that all party members must meet competitive eligibility requirements and be in the party.
+
+### Why is my in-game chat disconnected?
+The embedded XMPP chat client establishes a connection when the app is active. If your network connection drops or switches between Wi-Fi and mobile data, the app will automatically attempt to reconnect to the nearest regional Riot chat server.

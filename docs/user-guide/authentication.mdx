@@ -1,0 +1,53 @@
+---
+sidebar_position: 1
+---
+
+# Authentication & Accounts
+
+Val Shop provides a secure, streamlined authentication process that connects directly to Riot Games' official authentication infrastructure.
+
+---
+
+## How Authentication Works
+
+Val Shop uses Riot Games' official OAuth 2.0 / OpenID Connect (OIDC) web sign-in flow inside an embedded web view.
+
+```
+┌─────────────────┐       1. Interactive Login        ┌──────────────────────┐
+│ Val Shop Client │ ────────────────────────────────> │ auth.riotgames.com   │
+│ (Embedded View) │ <──────────────────────────────── │ (User + 2FA Verify)  │
+└────────┬────────┘       2. Redirect with Tokens     └──────────────────────┘
+         │
+         │ 3. Fetch Entitlements & Geo-Region
+         ▼
+┌─────────────────────────────────────────────────────┐
+│  • entitlements.auth.riotgames.com                  │
+│  • riot-geo.pas.si.riotgames.com (Shard Resolution) │
+│  • PAS Token for XMPP Real-time Chat                │
+└─────────────────────────────────────────────────────┘
+```
+
+### Steps to Sign In
+
+1. Open **Val Shop** and tap the **Sign In** button.
+2. An embedded Riot authentication screen will open. Enter your **Riot Username** and **Password**.
+3. If Two-Factor Authentication (2FA) is enabled on your Riot Account, enter the 6-digit verification code sent to your registered email or authenticator app.
+4. Once authenticated, the app intercepts the authorization redirect, extracts the secure session tokens, and fetches your entitlements, player shard (e.g. `ap`, `eu`, `na`, `kr`), and game profile details.
+
+---
+
+## Session Lifecycle & Auto-Refresh
+
+* **5-Minute Silent Refresh**: Val Shop includes an automatic background refresh loop that monitors your session token's expiration timestamp. When a token is within 15 minutes of expiring, the app performs a silent background renewal using your session cookies without interrupting your usage.
+* **On-Launch Refresh**: Every time you launch or bring the app to the foreground, Val Shop validates your tokens and automatically refreshes them if needed.
+* **Session Expiry Warning**: If your Riot session expires (for example, if you changed your Riot password or revoked active sessions), a prominent banner will notify you to re-authenticate.
+
+---
+
+## Multi-Account Management
+
+Val Shop supports multiple Riot accounts, making it effortless to manage primary, alt, and regional profiles on a single device:
+
+* **Adding an Account**: Navigate to your **Profile / Settings** screen and select **Add Account** to log into an additional Riot profile.
+* **Switching Profiles**: Tap on your active profile avatar in the header to switch between saved accounts instantly with a single tap. All storefronts, loadouts, and mission states update automatically for the selected account.
+* **Removing an Account**: In the accounts menu, you can swipe or select **Log Out** to securely remove the stored session and credentials for that specific account.
