@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkval_shop_web=self.webpackChunkval_shop_web||[]).push([["1668"],{6569(e,s,r){r.r(s),r.d(s,{default:()=>p});var a=r(4848);r(6540);var u=r(4164),c=r(4308),l=r(8287),h=r(2831),n=r(1085);function p(e){return(0,a.jsx)(c.e3,{className:(0,u.A)(l.G.wrapper.docsPages),children:(0,a.jsx)(n.A,{children:(0,h.v)(e.route.routes)})})}}}]);
