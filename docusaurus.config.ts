@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Valshop',
-  tagline: 'Check your daily VALORANT store items anytime, anywhere!',
+  title: 'VThunai',
+  tagline: 'Free, open-source VALORANT companion app for Android and iOS.',
   favicon: 'img/logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -79,9 +79,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Valshop',
+      title: 'VThunai',
       logo: {
-        alt: 'Valshop Logo',
+        alt: 'VThunai Logo',
         src: 'img/logo.png',
       },
       items: [
@@ -93,7 +93,7 @@ const config: Config = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/santhosh-D-subramani/valshop-web',
+          href: 'https://github.com/santhosh-D-subramani/VThunai',
           label: 'GitHub',
           position: 'right',
         },
@@ -136,13 +136,17 @@ const config: Config = {
             //   to: '/blog',
             // },
             {
-              label: 'GitHub',
-              href: 'https://github.com/santhosh-D-subramani/valshop-web',
+              label: 'VThunai GitHub',
+              href: 'https://github.com/santhosh-D-subramani/VThunai',
+            },
+            {
+              label: 'Releases',
+              href: 'https://github.com/santhosh-D-subramani/VThunai/releases',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Valshop. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} VThunai. Open-source under GPL-3.0. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

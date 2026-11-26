@@ -98,16 +98,16 @@ const FeatureList: FeatureItem[] = [
     icon: SmartphoneIcon,
     description: (
       <>
-        Enjoy a fast, responsive interface designed to feel right at home on your Android device.
+        Enjoy a fast, responsive Material 3 interface built with Flutter for both Android and iOS.
       </>
     ),
   },
   {
-    title: 'Secure Authentication',
+    title: 'Secure & Open Source',
     icon: ShieldLockIcon,
     description: (
       <>
-        Val Shop uses the official Riot Games authentication flow. We never see, handle, or store your account password. All tokens remain safe locally.
+        VThunai uses the official Riot Games authentication flow and is fully open-source (GPL-3.0). All tokens remain safe locally on your device.
       </>
     ),
   },
@@ -154,7 +154,7 @@ export default function HomepageFeatures(): ReactNode {
           <div className="col col--12">
             <div className={clsx('alert alert--secondary', styles.disclaimerBox)}>
               <small>
-                <strong>Disclaimer:</strong> Val Shop is an unofficial fan-made application and is not endorsed by or affiliated with Riot Games, Inc. Valorant and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
+                <strong>Disclaimer:</strong> VThunai is an unofficial, open-source fan-made application and is not endorsed by or affiliated with Riot Games, Inc. Valorant and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
               </small>
             </div>
           </div>

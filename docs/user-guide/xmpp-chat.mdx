@@ -8,14 +8,14 @@ sidebar_position: 4
 Real-time friends presence and in-game XMPP chat are currently in **active development / beta testing** and may not yet be available in public releases. This documentation outlines the underlying architecture and capabilities planned for upcoming releases.
 :::
 
-Val Shop integrates an experimental real-time XMPP client designed to connect directly to Riot Games' chat servers, enabling you to communicate with friends in-game and monitor their live status.
+VThunai integrates an experimental real-time XMPP client designed to connect directly to Riot Games' chat servers, enabling you to communicate with friends in-game and monitor their live status.
 
 
 ---
 
 ## Direct TLS XMPP Connection
 
-Val Shop establishes a direct, encrypted TLS connection (`SecureSocket`) on port **5223** with Riot's regional chat servers (e.g., `ap.chat.si.riotgames.com`, `eu.chat.si.riotgames.com`, `na.chat.si.riotgames.com`):
+VThunai establishes a direct, encrypted TLS connection (`SecureSocket`) on port **5223** with Riot's regional chat servers (e.g., `ap.chat.si.riotgames.com`, `eu.chat.si.riotgames.com`, `na.chat.si.riotgames.com`):
 
 * **SASL Authentication**: Authenticates securely using your Riot Single Sign-On (RSO) Access Token and PAS (Player Affinity Service) token under the `X-Riot-RSO-PAS` mechanism.
 * **Low Latency & Native Protocol**: Stanzas are parsed in real time, delivering instant presence updates and messaging without relying on third-party proxies or relays.

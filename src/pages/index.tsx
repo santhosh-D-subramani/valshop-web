@@ -20,8 +20,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="https://play.google.com/store/apps/details?id=com.santhoshDsubramani.val_shop">
-            Check the store
+            to="/docs/intro">
+            Get Started
+          </Link>
+          <Link
+            className="button button--outline button--secondary button--lg margin-left--md"
+            to="https://github.com/santhosh-D-subramani/VThunai">
+            View on GitHub
           </Link>
         </div>
         {/* <div className={styles.buttons}>
@@ -40,8 +45,8 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} — Open-Source VALORANT Companion`}
+      description="VThunai is a free, open-source, cross-platform VALORANT companion app built with Flutter for Android and iOS.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

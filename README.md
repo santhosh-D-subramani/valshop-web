@@ -1,100 +1,62 @@
-# Val Shop Web & Documentation
+# VThunai Documentation
 
-Official website and documentation for **Val Shop** — a comprehensive mobile companion app for VALORANT players.
+Official website and documentation for **VThunai** — a free, open-source, cross-platform companion application for VALORANT players, built with Flutter for Android and iOS.
 
-🌐 **Live Website**: [valshop.santhoshdsubramani.in](https://valshop.santhoshdsubramani.in)  
-📱 **Google Play Store**: [Val Shop on Google Play](https://play.google.com/store/apps/details?id=com.santhoshDsubramani.val_shop)
-
----
-
-## Overview
-
-This repository hosts the landing page, user documentation, architecture guides, and FAQ for the **Val Shop** mobile app. Built with [Docusaurus](https://docusaurus.io/), it provides a fast, responsive, and beautifully themed resource for players.
-
-### Key Sections
-
-* 🏠 **Homepage**: Highlights core app features, Google Play store link, and official disclaimers.
-* 📖 **User Guides**: Step-by-step documentation for authentication, daily store rotations, party lobby controls, contracts/missions, and loadout inspection.
-* 🛡️ **Privacy & Security**: Details regarding on-device token storage (`SharedPreferences`) and direct client-to-Riot communication.
-* ❓ **FAQ**: Answers to common questions, session renewal instructions, and troubleshooting.
+* **App Repository**: [santhosh-D-subramani/VThunai](https://github.com/santhosh-D-subramani/VThunai)
+* **Releases & Downloads**: [GitHub Releases](https://github.com/santhosh-D-subramani/VThunai/releases)
 
 ---
 
-## Tech Stack
+## About VThunai
 
-* **Framework**: [Docusaurus v3](https://docusaurus.io/) (Classic Preset)
-* **Frontend**: React 19, TypeScript
-* **Styling**: Vanilla CSS Modules (Material 3 color system compliance)
-* **Syntax Highlighting**: Prism React Renderer
+VThunai brings daily store tracking, loadout and preset management, match analytics, rank goal tracking, party and XMPP social features, and game reference data into a single mobile client so you can manage your account without launching your PC.
 
----
+### Features
 
-## Project Structure
-
-```text
-valshop-web/
-├── docs/                      # Documentation pages (Markdown / MDX)
-│   ├── intro.mdx              # Welcome & Quickstart overview
-│   ├── user-guide/            # Categorized user guides
-│   │   ├── authentication.mdx # Riot sign-in, 2FA, session refresh
-│   │   ├── store-and-favorites.mdx # Storefront, bundles, Night Market, wishlists
-│   │   ├── party-and-lobby.mdx # Matchmaking queues & server pods
-│   │   ├── xmpp-chat.mdx      # In-game presence & chat (Beta/WIP)
-│   │   ├── progression.mdx    # Missions, Battle Pass & KC
-│   │   └── profile-and-stats.mdx # Loadout & match history
-│   ├── privacy-and-security.mdx
-│   └── faq.mdx
-├── src/                       # Custom React components & pages
-│   ├── components/            # Reusable UI components (e.g. HomepageFeatures)
-│   ├── css/                   # Global styles & theme overrides
-│   └── pages/                 # Custom landing page (index.tsx)
-├── static/                    # Static assets (images, favicon, logo)
-├── docusaurus.config.ts       # Site configuration & navigation metadata
-└── sidebars.ts                # Documentation sidebar hierarchy
-```
+* **Authentication & Multi-Account Switching**: Sign in through the official Riot Games WebView flow with 2-Factor Authentication (2FA) support, and switch between multiple saved Riot accounts.
+* **Daily Store, Bundles & Wishlist**: Check daily weapon skin offers, pricing, and reset timers; browse featured and historical bundles, chromas, levels, and preview videos; track shop history and wishlist desired skins; sync offers to home screen widgets.
+* **Loadout & Presets**: Manage equipped weapon skins, buddies, sprays, and player cards; create, preview, and share loadout presets; configure rule-based auto-loadouts.
+* **Profile, Stats & Progression**: Inspect career summaries, match history, and round-by-round breakdowns; track rank progression, rank goals, XP forecasts, battlepass tiers, agent contracts, and estimated collection value; browse regional leaderboards and look up players.
+* **Party, Social & Game Info**: View and manage party state, friend lists, and real-time Riot XMPP presence and chat, plus an in-app reference hub for agents, maps, and weapons.
+* **Appearance & Localization**: Material 3 theming with dynamic color, light/dark/pure black modes, and support for English (`en`) and Tamil (`ta`).
 
 ---
 
-## Getting Started
+## Installing VThunai
 
-### Prerequisites
+* **iOS (Sideloading)**: Pre-built unsigned `.ipa` files (`VThunai.ipa`) are published on [GitHub Releases](https://github.com/santhosh-D-subramani/VThunai/releases) for installation via AltStore, SideStore, or other iOS sideloading tools.
+* **Android & Building from Source**: Clone and build from the main [VThunai repository](https://github.com/santhosh-D-subramani/VThunai).
 
-* [Node.js](https://nodejs.org/) (version `20.0` or higher)
-* `npm`, `yarn`, `pnpm`, or `bun`
+---
 
-### Installation
+## Privacy & Security
+
+* Authentication is performed directly on the official Riot Games sign-in page inside an in-app WebView.
+* Account tokens and session data are stored locally on your device using `SharedPreferences` and are never transmitted to any third-party developer server.
+* Network requests go only to official Riot endpoints, community game-data/stats endpoints (`valorant-api.com`, `api.henrikdev.xyz`), and your configured remote config URL.
+
+---
+
+## Running Documentation Locally
+
+To preview or contribute to this documentation site locally:
 
 ```bash
-npm install
+bun install
+bun run start
 ```
 
-### Local Development
-
-Start the local development server:
+To type-check and build static production assets:
 
 ```bash
-npm run start
-```
-
-Runs the site locally at `http://localhost:3000/` with fast hot-reloading.
-
-### Type Checking & Production Build
-
-Check TypeScript types and compile static production files:
-
-```bash
-# Type check
-npm run typecheck
-
-# Build static assets for production
-npm run build
-
-# Preview the production build locally
-npm run serve
+bun run typecheck
+bun run build
 ```
 
 ---
 
-## Disclaimer
+## License & Disclaimer
 
-*Val Shop is a fan-made project and is not affiliated with, endorsed, or sponsored by Riot Games, Inc. VALORANT and Riot Games are trademarks or registered trademarks of Riot Games, Inc.*
+VThunai is free, open-source software licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
+
+VThunai is an unofficial, fan-made project created under Riot Games' "Legal Jibber Jabber" policy. It is not affiliated with, endorsed, or sponsored by Riot Games, Inc. VALORANT and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
